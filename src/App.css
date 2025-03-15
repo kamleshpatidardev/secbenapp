@@ -1,0 +1,43 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.splash-container {
+  flex: 1;
+  background: url('https://www.securitybenefit.com/path-to-background-image.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.cta-button:hover {
+  background-color: #005bb5;
+}

@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002244;
+    padding: 15px 30px;
+  }
+  
+  .footer-left .logo {
+    width: 250px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
