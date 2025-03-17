@@ -1,21 +1,24 @@
-import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+// App.js
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Contact from './Pages/Contactus';
+import Privacy from './Pages/Privacy';
+import Terms from './Pages/Terms';
 
+ 
 const App = () => {
-  return (
-    <div className="app-container">
-      <Header />      
-      <main className="splash-container">
-        <div className="overlay">
-          <h1>Welcome to Security Benefit</h1>
-          <p>Helping you plan for your financial future.</p>
-          <a href="https://www.securitybenefit.com" className="cta-button">Learn More</a>
-        </div>
-      </main>      
-      <Footer />
-    </div>
-  );
+   return (
+      <>
+         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+         </Routes>
+      </>
+   );
 };
-
+ 
 export default App;
