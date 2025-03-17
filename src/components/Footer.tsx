@@ -1,16 +1,15 @@
 import "./Footer.css";
 import logo from "../assets/logo.svg";
-
+import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-left">
-        <img src={logo} alt="Security Benefit Logo" className="logo" />
+      <NavLink to="/"><img src={logo} alt="Security Benefit Logo" className="logo" /></NavLink>
       </div>
       <nav className="nav-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Support</a>
+      <NavLink to="/privacy">Privacy Policy</NavLink>
+      <NavLink to="/terms">Terms of Service</NavLink>
       </nav>
     </footer>
   );
