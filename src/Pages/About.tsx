@@ -4,14 +4,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const About = () => {
-	const [quotes, setQuotes] = useState([]);
+	const [auquotes, setAuquotes] = useState<null | {quote: any, author: any}>(null);
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
 				const response = await fetch('https://dummyjson.com/quotes/random');
 				const result = await response.json();
 				console.log(result);
-				setQuotes(result);
+				setAuquotes(result);
 			} catch (error) {
 				console.error('Error fetching data:', error);
 			}
@@ -27,8 +27,8 @@ const About = () => {
 					<h1>About</h1>
 				</div>
 				<blockquote>
-					{quotes.quote}
-					<span>{quotes.author}</span>
+					{auquotes?.quote}
+					<span>{auquotes?.author}</span>
 				</blockquote>
 				<div className="about-container">
 					<p>
